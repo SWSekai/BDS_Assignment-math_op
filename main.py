@@ -1,5 +1,7 @@
 from  math_op import basic_op
 from math_op import advanced_op
+def printResult():
+    print("\nResult:", end = " ")
 
 def main():
     
@@ -17,12 +19,15 @@ def main():
             print("7. Square root")
             print("8. Logarithm")
             print("Enter \"exit\" to exit")
+            
             choice = input("\nEnter operation: ")
             continue
         
         elif choice in ["1", "2", "3", "4"]:
             num1 = int(input("\nEnter first number: "))
             num2 = int(input("Enter second number: "))
+            
+            printResult()
             
             if choice == "1":
                 print(basic_op.add(num1, num2))
@@ -38,6 +43,9 @@ def main():
                     
         elif choice == "5":
             nums = list(map(float, input("\nEnter number seperated by space: ").split()))
+            
+            printResult()
+            
             try:
                 print(advanced_op.average(nums))
             except ValueError as e:
@@ -46,10 +54,16 @@ def main():
         elif choice == "6":
             base = int(input("\nEnter base: "))
             exponent = int(input("Enter exponent: "))
+            
+            printResult()
+            
             print(advanced_op.power(base, exponent))
         
         elif choice == "7":
             num = int(input("\nEnter number: "))
+            
+            printResult()
+            
             try:
                 print(advanced_op.sqrt(num))
             except ValueError as e:
@@ -58,6 +72,9 @@ def main():
         elif choice == "8":
             num = int(input("\nEnter number: "))
             base = int(input("Enter base: "))
+            
+            printResult()
+            
             try:
                 print(advanced_op.log(num, base))
             except ValueError as e:
