@@ -6,7 +6,7 @@ def printResult():
 def main():
     
     while True:
-        choice = input("Enter operation or enter \"op\" to get the hint: ")
+        choice = input("\nEnter operation or enter \"op\" to get the hint: ")
         
         if choice == "op":
             print("\nOperations:")
@@ -20,7 +20,6 @@ def main():
             print("8. Logarithm")
             print("Enter \"exit\" to exit")
             
-            choice = input("\nEnter operation: ")
             continue
         
         elif choice in ["1", "2", "3", "4"]:
